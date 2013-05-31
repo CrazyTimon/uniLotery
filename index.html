@@ -74,13 +74,10 @@
         box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15),0 1px 2px rgba(0, 0, 0, 0.05);
     }
     .js-start{
-        padding:10px;
-        border: 1px solid gray;
-        border-radius:5px;
-        display: inline-block;
+        padding: 10px;
+        border: 1px solid #808080;
+        border-radius: 5px;
         cursor: pointer;
-        position: absolute;
-        top: 61%;
         left: 46%;
         text-transform: uppercase;
         font-family: tahoma;
@@ -93,6 +90,9 @@
         border-color: #51A351 #51A351 #387038;
         padding-right: 30px;
         padding-left: 30px;
+        margin: 0 auto;
+        width: 115px;
+        margin-top:10px;
     }
     .js-spin_numbers{
         font-size: 100px;
@@ -110,23 +110,25 @@
         background: url(http://subtlepatterns.com/patterns/dark_fish_skin.png);
     }
     .automat_box{
-        margin-top: 18%;
-        margin-left: 34%;
-        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
         border: 3px solid #BBB;
         padding: 50px 75px 50px 75px;
         background: url(http://subtlepatterns.com/patterns/bo_play_pattern.png);
         border-radius: 7px;
         box-shadow: 0px 0px 66px #FFF inset;
+        width: 488px;
+        margin-top: 20%;
+    }
+    #input_value{
+        display:none;
     }
 </style>
  
 </head>
  
 <body>
-<center>    
-    <div class="js-start">Start</div>
-</center>
 <div class="automat_box">
     <div class="nyanya">
         <div class="outer_block_keys">
@@ -263,51 +265,109 @@
         </div>
     </div>
 </div>
+<div class="js-start">Start</div>
+<div id="input_value">
+02345
+12345
+</div>
 <script>
-function create_rand(){
-    var min=1, max=10;
+$(function() {
+    all_requests = $("#input_value").html().split("\n");
+    test_num = all_requests[create_rand(1,all_requests.length-2)];
+    $(".automat_box").css("display","none");
+    $(".automat_box").slideDown(2000,"easeOutBounce");
+});
+function create_rand(min, max){
     var rand = min + Math.random()*(max+1-min);
     rand = rand^0; // округление битовым оператором
     return rand;
 }
+
 $('.js-start').on("click", function() {
-    function get_endY(){
-    var test = create_rand();
-    console.log(test);
-    var end_Y = ($(".outer_block .js-spin_numbers").height()) - ($(".outer_block .js-spin_numbers>div:first").height()*(test+1)) + 18;
-    return end_Y;
+    test_num = all_requests[create_rand(1,all_requests.length-2)];
+    function get_endY(index){
+        //var test = create_rand();
+        var current_number;
+
+        /*
+        0=8 
+        1=7
+        2=6
+        3=5
+        4=4
+        5=3
+        6=2
+        7=1
+        8=0
+        9=9
+        */
+        switch (index) {
+            case "0":
+                    current_number = 8;
+                break
+            case "1":
+                    current_number = 7;
+                break
+            case "2":
+                    current_number = 6;
+                break
+            case "3":
+                    current_number = 5;
+                break
+            case "4":
+                    current_number = 4;
+                break
+            case "5":
+                    current_number = 3;
+                break
+            case "6":
+                    current_number = 2;
+                break
+            case "7":
+                    current_number = 1;
+                break
+            case "8":
+                    current_number = 0;
+                break
+            case "9":
+                    current_number = 9;
+                break
+        }
+        var end_Y = ($(".outer_block .js-spin_numbers").height()) - ($(".outer_block .js-spin_numbers>div:first").height()*(parseInt(current_number)+1)) - 102;
+        return end_Y;
     }
 
     var effect = "easeOutBounce",
         duration = 2000;
 
     $(".outer_block_1>.js-spin_numbers>div:first").css("margin-top","0px");
+    debugger;
     $(".outer_block_1>.js-spin_numbers>div:first").animate({
-        marginTop: "-="+get_endY(),
+        marginTop: "-="+get_endY(test_num[0]),
     }, duration, effect, function() {
         $(this).parents(".outer_block").css("box-shadow", "0px 0px 7px 2px #6F6 inset");
         $(this).parents(".outer_block").css("border", "2px solid #6B6");
         $(".outer_block_2>.js-spin_numbers>div:first").css("margin-top","0px");
         $(".outer_block_2>.js-spin_numbers>div:first").animate({
-        marginTop: "-="+get_endY(),
+        marginTop: "-="+get_endY(test_num[1]),
         }, duration, effect, function() {
             $(this).parents(".outer_block").css("box-shadow", "0px 0px 7px 2px #6F6 inset");
             $(this).parents(".outer_block").css("border", "2px solid #6B6");
             $(".outer_block_3>.js-spin_numbers>div:first").css("margin-top","0px");
             $(".outer_block_3>.js-spin_numbers>div:first").animate({
-            marginTop: "-="+get_endY(),
+            marginTop: "-="+get_endY(test_num[2]),
             }, duration, effect, function() {
                 $(this).parents(".outer_block").css("box-shadow", "0px 0px 7px 2px #6F6 inset");
                 $(this).parents(".outer_block").css("border", "2px solid #6B6");
                 $(".outer_block_4>.js-spin_numbers>div:first").css("margin-top","0px");
                 $(".outer_block_4>.js-spin_numbers>div:first").animate({
-                marginTop: "-="+get_endY(),
+                marginTop: "-="+get_endY(test_num[3]),
                 }, duration, effect, function() {
                     $(this).parents(".outer_block").css("box-shadow", "0px 0px 7px 2px #6F6 inset");
                     $(this).parents(".outer_block").css("border", "2px solid #6B6");
                     $(".outer_block_5>.js-spin_numbers>div:first").css("margin-top","0px");
                     $(".outer_block_5>.js-spin_numbers>div:first").animate({
-                    marginTop: "-="+get_endY(),
+                    marginTop: "-="+get_endY(test_num[4]),
                     }, duration, effect, function() {
                         $(this).parents(".outer_block").css("box-shadow", "0px 0px 7px 2px #6F6 inset");
                         $(this).parents(".outer_block").css("border", "2px solid #6B6");
@@ -317,8 +377,6 @@ $('.js-start').on("click", function() {
         })
     })
 });
-    $(".automat_box").css("display","none");
-    $(".automat_box").slideDown(2000,"easeOutBounce");
 </script>
 </body>
 </html>
