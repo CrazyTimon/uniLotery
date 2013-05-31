@@ -12,6 +12,9 @@
 <meta name="keywords" content="" />
 <!--link type="text/css" rel="stylesheet" href="style.css"-->
 <style>
+    body{
+        background: url(http://subtlepatterns.com/patterns/diamond_upholstery.png);
+    }
     .outer_block{
         height:90px;
         overflow: hidden;
@@ -21,6 +24,16 @@
         border-radius: 10px;
         display: inline-block;
         box-shadow: 0px 0px 7px 2px #666 inset;
+        background: #b8bac6; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIxJSIgc3RvcC1jb2xvcj0iI2I4YmFjNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI2JSIgc3RvcC1jb2xvcj0iI2RiZGNlMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2VmZjFmNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc2JSIgc3RvcC1jb2xvcj0iI2RkZGZlMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiOGJhYzYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(left,  #b8bac6 1%, #dbdce2 26%, #eff1f4 50%, #dddfe3 76%, #b8bac6 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right top, color-stop(1%,#b8bac6), color-stop(26%,#dbdce2), color-stop(50%,#eff1f4), color-stop(76%,#dddfe3), color-stop(100%,#b8bac6)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left,  #b8bac6 1%,#dbdce2 26%,#eff1f4 50%,#dddfe3 76%,#b8bac6 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(left,  #b8bac6 1%,#dbdce2 26%,#eff1f4 50%,#dddfe3 76%,#b8bac6 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(left,  #b8bac6 1%,#dbdce2 26%,#eff1f4 50%,#dddfe3 76%,#b8bac6 100%); /* IE10+ */
+        background: linear-gradient(to right,  #b8bac6 1%,#dbdce2 26%,#eff1f4 50%,#dddfe3 76%,#b8bac6 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8bac6', endColorstr='#b8bac6',GradientType=1 ); /* IE6-8 */
     }
     .outer_block_keys{
         height:90px;
@@ -31,6 +44,16 @@
         border-radius: 10px;
         display: inline-block;
         box-shadow: 0px 0px 7px 2px #666 inset;
+            background: #b8bac6; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIxJSIgc3RvcC1jb2xvcj0iI2I4YmFjNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI2JSIgc3RvcC1jb2xvcj0iI2RiZGNlMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2VmZjFmNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc2JSIgc3RvcC1jb2xvcj0iI2RkZGZlMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiOGJhYzYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(left,  #b8bac6 1%, #dbdce2 26%, #eff1f4 50%, #dddfe3 76%, #b8bac6 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right top, color-stop(1%,#b8bac6), color-stop(26%,#dbdce2), color-stop(50%,#eff1f4), color-stop(76%,#dddfe3), color-stop(100%,#b8bac6)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left,  #b8bac6 1%,#dbdce2 26%,#eff1f4 50%,#dddfe3 76%,#b8bac6 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(left,  #b8bac6 1%,#dbdce2 26%,#eff1f4 50%,#dddfe3 76%,#b8bac6 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(left,  #b8bac6 1%,#dbdce2 26%,#eff1f4 50%,#dddfe3 76%,#b8bac6 100%); /* IE10+ */
+        background: linear-gradient(to right,  #b8bac6 1%,#dbdce2 26%,#eff1f4 50%,#dddfe3 76%,#b8bac6 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8bac6', endColorstr='#b8bac6',GradientType=1 ); /* IE6-8 */
     }
 
     .outer_block_keys>.js-spin_numbers{
@@ -45,12 +68,31 @@
     ul{
         list-style-type:none;
     }
+    .js-start:active{
+        background: #51A351 !important;
+        outline: 0;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15),0 1px 2px rgba(0, 0, 0, 0.05);
+    }
     .js-start{
         padding:10px;
         border: 1px solid gray;
         border-radius:5px;
-        background-color: #AFcFFF;
         display: inline-block;
+        cursor: pointer;
+        position: absolute;
+        top: 61%;
+        left: 46%;
+        text-transform: uppercase;
+        font-family: tahoma;
+        font-size: 40px;
+        color: #FFF;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        background-color: #5BB75B;
+        background: linear-gradient(to bottom,#62C462,#51A351);
+        background-repeat: repeat-x;
+        border-color: #51A351 #51A351 #387038;
+        padding-right: 30px;
+        padding-left: 30px;
     }
     .js-spin_numbers{
         font-size: 100px;
@@ -60,145 +102,164 @@
     }
     .nyanya{
         text-align: center;
-        padding-top:300px;
+        border: 4px solid #A8A8A8;
+        display: inline-block;
+        border-radius: 20px;
+        padding: 10px 10px 5px 5px;
+        box-shadow: 0px 0px 0px 3px #D8D8D8 inset;
+        background: url(http://subtlepatterns.com/patterns/dark_fish_skin.png);
+    }
+    .automat_box{
+        margin-top: 18%;
+        margin-left: 34%;
+        display: inline-block;
+        border: 3px solid #BBB;
+        padding: 50px 75px 50px 75px;
+        background: url(http://subtlepatterns.com/patterns/bo_play_pattern.png);
+        border-radius: 7px;
+        box-shadow: 0px 0px 66px #FFF inset;
     }
 </style>
  
 </head>
  
 <body>
-<div class="js-start">Start</div>
-<div class="nyanya">
-    <div class="outer_block_keys">
-        <div class="js-spin_numbers">
-            <div>Q</div>
-            <div>q</div>
+<center>    
+    <div class="js-start">Start</div>
+</center>
+<div class="automat_box">
+    <div class="nyanya">
+        <div class="outer_block_keys">
+            <div class="js-spin_numbers">
+                <div>Q</div>
+                <div>q</div>
+            </div>
         </div>
-    </div>
-    <div class="outer_block_keys">
-        <div class="js-spin_numbers">
-            <div>R</div>
-            <div>r</div>
+        <div class="outer_block_keys">
+            <div class="js-spin_numbers">
+                <div>R</div>
+                <div>r</div>
+            </div>
         </div>
-    </div>
-    <div class="outer_block outer_block_1">
-        <div class="js-spin_numbers">
-            <div>0</div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div>0</div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
+        <div class="outer_block outer_block_1">
+            <div class="js-spin_numbers">
+                <div>0</div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>0</div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+            </div>
         </div>
-    </div>
-    <div class="outer_block outer_block_2">
-        <div class="js-spin_numbers">
-            <div>0</div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div>0</div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
+        <div class="outer_block outer_block_2">
+            <div class="js-spin_numbers">
+                <div>0</div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>0</div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+            </div>
         </div>
-    </div>
-    <div class="outer_block outer_block_3">
-        <div class="js-spin_numbers">
-            <div>0</div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div>0</div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
+        <div class="outer_block outer_block_3">
+            <div class="js-spin_numbers">
+                <div>0</div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>0</div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+            </div>
         </div>
-    </div>
-    <div class="outer_block outer_block_4">
-        <div class="js-spin_numbers">
-            <div>0</div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div>0</div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
+        <div class="outer_block outer_block_4">
+            <div class="js-spin_numbers">
+                <div>0</div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>0</div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+            </div>
         </div>
-    </div>
-    <div class="outer_block outer_block_5">
-        <div class="js-spin_numbers">
-            <div>0</div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div>0</div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
+        <div class="outer_block outer_block_5">
+            <div class="js-spin_numbers">
+                <div>0</div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>0</div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+            </div>
         </div>
     </div>
 </div>
@@ -256,6 +317,8 @@ $('.js-start').on("click", function() {
         })
     })
 });
+    $(".automat_box").css("display","none");
+    $(".automat_box").slideDown(2000,"easeOutBounce");
 </script>
 </body>
 </html>
